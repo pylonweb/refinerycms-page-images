@@ -1,0 +1,16 @@
+da:
+  refinery:
+    plugins:
+      refinery_page_images:
+        title: Side billeder
+        description: Page Images allows you to relate one or more images to any page in Refinery which makes it really easy for you to create simple image galleries with lightbox style popups on the front end page views.
+    js:
+      admin:
+        page_images:
+          add_caption: Tilføj billedtekst
+          done: Færdig
+    admin:
+      pages:
+        tabs:
+          images_bar:
+            add: Tilføj billed

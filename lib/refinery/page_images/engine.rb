@@ -8,7 +8,7 @@ module Refinery
       engine_name :refinery_page_images
 
       def self.register(tab)
-        tab.name = "images"
+        tab.name = "Billeder"
         tab.partial = "/refinery/admin/pages/tabs/images"
       end
 
