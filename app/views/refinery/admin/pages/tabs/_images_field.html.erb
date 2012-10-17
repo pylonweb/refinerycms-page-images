@@ -15,6 +15,17 @@
                               :class => 'page_caption' %>
           </div>
         <% end %>
+        <% if Refinery::PageImages.format %>
+          <span class="crop" style="display: none">
+            <%= hidden_field_tag "#{f.object_name.demodulize}[images_attributes][#{index}][crop]", 
+                                  0,
+                                  id: "page_captions_#{index}" %>
+            <%= check_box_tag  "#{f.object_name.demodulize}[images_attributes][#{index}][crop]", 
+                                1,
+                                f.object.crop_for_image_index(index) %>
+            <%= label_tag "#{f.object_name.demodulize}[images_attributes][#{index}][crop]", "Crop" %>
+          </span>
+        <% end %>
       </li>
     <% end %>
     <li class='empty'>

@@ -26,8 +26,8 @@ module Refinery
             image_pages_to_delete.destroy_all
 
             data.each do |i, image_data|
-              image_page_id, image_id, caption =
-                image_data.values_at('image_page_id', 'id', 'caption')
+              image_page_id, image_id, caption, crop =
+                image_data.values_at('image_page_id', 'id', 'caption', 'crop')
 
               next if image_id.blank?
 
@@ -39,6 +39,7 @@ module Refinery
 
               image_page.position = i
               image_page.caption = caption if Refinery::PageImages.captions
+              image_page.crop = crop if Refinery::PageImages.format
               image_page.save
             end
           end
@@ -53,6 +54,10 @@ module Refinery
 
         def caption_for_image_index(index)
           self.image_pages[index].try(:caption).presence || ""
+        end
+        
+        def crop_for_image_index(index)
+          self.image_pages[index].try(:crop) || false
         end
 
         def image_page_id_for_image_index(index)

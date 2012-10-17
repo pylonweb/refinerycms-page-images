@@ -63,6 +63,14 @@ reset_functionality = function() {
           $(this).parents('li').first().remove();
           reindex_images();
         });
+        
+        if ($(this).find('.crop').length > 0) {
+          crop = $(this).find('.crop').remove();
+          crop.appendTo(image_actions);
+          crop.show();
+        } else {
+          image_actions.addClass('no_crop');
+        }
 
         if ($(this).find('textarea.page_caption').length > 0) {
           img_caption = $("<img src='/assets/refinery/icons/user_comment.png' width='16' height='16' class='caption' />");

@@ -14,6 +14,7 @@
     &.odd {
       margin-right: 18px;
     }
+    
     .image_actions {
       background: white;
       position: absolute;
@@ -27,13 +28,30 @@
       &.no_captions {
         background: transparent;
       }
+      
+      span.crop{
+        position: absolute;
+        text-align: center;
+        width: 50%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        label{
+          margin: 0;
+          font-weight: normal;
+          display: inline;
+        }
+      }
+      
+      img.caption {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+      }
     }
   }
-  > li .image_actions img.caption {
-    position: absolute;
-    right: 3px;
-    top: 3px;
-  }
+ 
 }
 
 #content {
