@@ -1,0 +1,18 @@
+da:
+  refinery:
+    plugins:
+      refinery_page_images:
+        title: Sidebilleder
+        description: Sidebilleder gør det muligt at tilkoble en eller flere billeder til en enhver side i Refinery, hvilket gør det meget let at lave simple billed gallerier i frontend.
+    js:
+      admin:
+        page_images:
+          add_caption: Tilføj Billedtekst
+          done: Afslut
+    admin:
+      pages:
+        tabs:
+	images_field:
+            crop: Beskær
+          images_bar:
+            add: Tilføj Billed

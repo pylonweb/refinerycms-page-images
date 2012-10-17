@@ -23,7 +23,7 @@
             <%= check_box_tag  "#{f.object_name.demodulize}[images_attributes][#{index}][crop]", 
                                 1,
                                 f.object.crop_for_image_index(index) %>
-            <%= label_tag "#{f.object_name.demodulize}[images_attributes][#{index}][crop]", "Crop" %>
+            <%= label_tag "#{f.object_name.demodulize}[images_attributes][#{index}][crop]", t('.crop') %>
           </span>
         <% end %>
       </li>
