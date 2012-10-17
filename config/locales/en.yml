@@ -12,7 +12,7 @@ en:
     admin:
       pages:
         tabs:
-	images_field:
+          images_field:
             crop: Crop
           images_bar:
             add: Add Image

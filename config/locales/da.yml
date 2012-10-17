@@ -12,7 +12,7 @@ da:
     admin:
       pages:
         tabs:
-	images_field:
+          images_field:
             crop: Beskær
           images_bar:
             add: Tilføj Billed
