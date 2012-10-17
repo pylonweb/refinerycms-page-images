@@ -38,6 +38,17 @@
                             :id => "page_captions_#{f.object.images.size}",
                             :class => 'page_caption' %>
         </div>
+        <% if Refinery::PageImages.format %>
+          <span class="crop" style="display: none">
+            <%= hidden_field_tag "#{f.object_name.demodulize}[images_attributes][#{f.object.images.size}][crop]", 
+                                  0,
+                                  id: "page_captions_#{f.object.images.size}" %>
+            <%= check_box_tag  "#{f.object_name.demodulize}[images_attributes][#{f.object.images.size}][crop]", 
+                                1,
+                                true %>
+            <%= label_tag "#{f.object_name.demodulize}[images_attributes][#{f.object.images.size}][crop]", t('.crop') %>
+          </span>
+        <% end %>
       <% end %>
     </li>
   </ul>
