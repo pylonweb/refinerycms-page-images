@@ -4,6 +4,8 @@
   width: 280px;
   width: 100%;
   li {
+    height: 284px;
+    overflow:hidden;
     position: relative;
     list-style: none;
     float: left;
@@ -53,5 +55,5 @@ a#add_image_link {
   padding-left: 20px;
   display: inline;
   border-bottom: 0;
-  background: image-url('refinery/icons/add.png') no-repeat 0px 6px;
+  background: image-url('refinery/icons/arrow_switch.png') no-repeat 0px 6px;
 }
